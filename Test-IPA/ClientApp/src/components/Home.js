@@ -6,7 +6,7 @@ export class Home extends Component {
   render () {
     return (
       <div>
-        <h1>Hallo mini Javabaum Kraecks!</h1>
+        <h1>Welcome to the Javabaum Casino!</h1>
       </div>
     );
   }
