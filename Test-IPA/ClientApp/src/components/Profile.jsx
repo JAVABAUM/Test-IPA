@@ -21,11 +21,21 @@ export default class Profile extends Component {
         });
     }
 
+    signout() {
+        const auth = getAuth();
+        auth.signOut().then(function () {
+            console.log("logged out");
+        });
+    }
+
+    componentWillUnmount() { };
+
     render() {
         if(!getAuth().currentUser) return <Redirect to="/login"/>
         return (
             <>
-                <button>logout</button>
+                <h3>Welcome, { getAuth().currentUser.email}</h3>
+                <button onClick={this.signout}>logout</button>
                 </>
         );
     }
