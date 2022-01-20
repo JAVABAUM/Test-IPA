@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Test-IPA",
+    "\\Test-IPA\\ClientApp",
+    "\\Test-IPA\\ClientApp\\public",
+    "\\Test-IPA\\Controllers",
+    "\\Test-IPA\\Pages",
+    "\\Test-IPA\\Properties"
+  ],
+  "SelectedNode": "\\Test-IPA\\Startup.cs",
+  "PreviewInSolutionExplorer": false
+}
