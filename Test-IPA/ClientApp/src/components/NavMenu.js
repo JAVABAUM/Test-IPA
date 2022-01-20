@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 import { Collapse, Container, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import './NavMenu.css';
+import firebase from '../Auth'
+import { getAuth } from 'firebase/auth';
 
 export class NavMenu extends Component {
   static displayName = NavMenu.name;
 
   constructor (props) {
     super(props);
-
+       
     this.toggleNavbar = this.toggleNavbar.bind(this);
     this.state = {
       collapsed: true
@@ -38,7 +40,13 @@ export class NavMenu extends Component {
                 </NavItem>
                 <NavItem>
                   <NavLink tag={Link} className="text-dark" to="/slotmachine">Slot-Machine</NavLink>
+
+                                {getAuth().currentUser ?
+                                    <NavLink tag={Link} className="text-dark" to="/profile"><p>Profile</p>
+                                    </NavLink> : <NavLink tag={Link} className="text-dark" to="/login"><p>Login</p>
+                                    </NavLink>}
                 </NavItem>
+                
               </ul>
             </Collapse>
           </Container>
