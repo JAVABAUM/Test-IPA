@@ -97,7 +97,7 @@ function login(e) {
     var error = document.getElementsByClassName("error").value;
 
     signInWithEmailAndPassword(auth, mail, password).then((cred) => {
-        window.location.replace("/");
+        // window.location.replace("/");
         console.log(auth.currentUser);
     }).catch((err) => {
         console.log(err);
