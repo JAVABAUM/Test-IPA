@@ -55,6 +55,7 @@ export default class Profile extends Component {
                 <h3>Welcome, {getAuth().currentUser.email}</h3>
                 <br />
                 <p>coins: { (this.state.coins) }</p>
+
                 <button onClick={this.signout}>logout</button>
                 <br />
                 <button onClick={this.addcoins}>Add 10 coins to your account</button>
