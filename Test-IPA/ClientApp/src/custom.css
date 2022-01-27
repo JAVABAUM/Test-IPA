@@ -1,5 +1,5 @@
 a {
-  color: #0366d6;
+  color: white;
 }
 
 code {
@@ -10,4 +10,9 @@ code {
   color: #fff;
   background-color: #1b6ec2;
   border-color: #1861ac;
+}
+
+body {
+    background-color: #1A1A1D;
+    color: white;
 }
