@@ -1,18 +1,55 @@
 a {
-  color: white;
+    color: white;
 }
 
 code {
-  color: #E01A76;
+    color: #E01A76;
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
 }
 
 body {
     background-color: #1A1A1D;
     color: white;
 }
+
+.button {
+    margin: 10px;
+    border-radius: 5px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 5px 10px;
+}
+    .button:hover {
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+.button-red {
+    margin: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid red;
+}
+
+    .button-red:hover {
+        background-color: rgba(255, 0, 0, 0.31);
+    }
+
+.button-confirm {
+    margin: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid rgba(54, 232, 71, 1);
+}
+
+    .button-confirm:hover {
+        background-color: rgba(54, 232, 71, 0.31);
+    }

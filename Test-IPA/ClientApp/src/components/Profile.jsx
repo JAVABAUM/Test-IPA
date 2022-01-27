@@ -1,6 +1,7 @@
 ﻿import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import './NavMenu.css';
+import '../custom.css'
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { addCoinsToAccount, getCoins, getStats } from '../Coins';
 
@@ -54,10 +55,12 @@ export default class Profile extends Component {
             <>
                 <h3>Welcome, {getAuth().currentUser.email}</h3>
                 <br />
-                <p>coins: { (this.state.coins) }</p>
-                <button onClick={this.signout}>logout</button>
-                <br />
-                <button onClick={this.addcoins}>Add 10 coins to your account</button>
+                <p>coins: {(this.state.coins)}</p>
+                <br/>
+                <div className="row">
+                <button onClick={this.signout} className="button-red">logout</button>
+                    <button onClick={this.addcoins} className="button-confirm">Add 10 coins to your account</button>
+                    </div>
             </>
         );
     }
