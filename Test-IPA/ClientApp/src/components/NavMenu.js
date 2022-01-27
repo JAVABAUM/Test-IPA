@@ -35,9 +35,9 @@ export class NavMenu extends Component {
         
     return (
       <header>
-            <Navbar className="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom border-danger border-4 box-shadow mb-3" light>
+            <Navbar className="navbar-dark navbar-expand-sm navbar-toggleable-sm border-bottom border-danger border-4 box-shadow mb-3">
           <Container>
-            <NavbarBrand tag={Link} to="/" className="text-light">Casino</NavbarBrand>
+            <NavbarBrand tag={Link} to="/" className="nav-title">Casino</NavbarBrand>
             <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
             <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!this.state.collapsed} navbar>
               <ul className="navbar-nav flex-grow">                
@@ -50,7 +50,7 @@ export class NavMenu extends Component {
                 
               </ul>
             </Collapse>
-          </Container>
+          </Container>  
         </Navbar>
       </header>
     );
