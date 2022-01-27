@@ -34,7 +34,11 @@ export default class Profile extends Component {
         if(!getAuth().currentUser) return <Redirect to="/login"/>
         return (
             <>
-                <h3>Welcome, { getAuth().currentUser.email}</h3>
+                <h3>Welcome, {getAuth().currentUser.email}</h3> <br></br>
+                <h4>Your statistics:</h4>
+                <h5>Coins: </h5>
+                <h5>Games won: </h5>
+                <h5>Games lost: </h5>
                 <button onClick={this.signout}>logout</button>
                 </>
         );

@@ -1,7 +1,6 @@
-﻿import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
+﻿import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import React from 'react';
 import '../Auth';
-import { BrowserRouter as Redirect } from "react-router-dom";
-import React, { Component } from 'react';
 
 
 function Login() {

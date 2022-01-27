@@ -8,7 +8,8 @@ export class Home extends Component {
   render () {
     return (
       <div>
-            <h1>Welcome to the Javabaum Casino!</h1>
+            <h1>Welcome to the JAVABAUM Casino!</h1> <br></br>
+            <h2>Game selection:</h2>
 
             <div className="row">
 
