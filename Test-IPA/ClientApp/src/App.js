@@ -6,6 +6,7 @@ import { PrivateRoute } from '../src/PrivateRoute';
 
 import './custom.css'
 import { Slotmachine } from './components/Slotmachine';
+import Signup from './components/Signup';
 import Login from './components/Login';
 import Profile from './components/Profile';
 
@@ -18,6 +19,7 @@ export default class App extends Component {
             <Route exact path='/' component={Home} />
             <Route exact path='/slotmachine' component={Slotmachine} />
             <Route exact path='/login' component={Login} />
+            <Route exact path='/signup' component={Signup} />
             <Route exact path='/profile' component={Profile} />
       </Layout>
     );
