@@ -41,6 +41,7 @@ async function getCoins(accountID) {
 }
 
 async function getStats(accountID) {
+    console.log(accountID);
     const db = getFirestore();
     const docRef = doc(db, "users", accountID);
     const docSnap = await getDoc(docRef);
@@ -53,6 +54,37 @@ async function getStats(accountID) {
     }
 
     return stats;
+}
+
+async function updateStats(accountID, statistic, change) {
+    const db = getFirestore();
+    const docRef = doc(db, "users", accountID);
+    var data = {}
+    var stats = getStats();
+
+    stats.then((value) => {
+        switch (statistic) {
+            case "gamesWon":
+                data = { gamesWon: value.gamesWon + change };
+                break;
+            case "gamesLost":
+                data = { gamesLost: value.gamesLost + change };
+                break;
+            case "coinsWon":
+                data = { coinsWon: value.coinsWon + change };
+                break;
+            case "coinsLost":
+                data = { coinsLost: value.coinsLost + change };
+                break;
+        }
+
+        if (data != {}) {
+            await updateDoc(account, data});
+        }
+    })
+
+    
+
 }
 
 export { addCoinsToAccount, getCoins, getStats };
