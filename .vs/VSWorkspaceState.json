@@ -3,11 +3,9 @@
     "",
     "\\Test-IPA",
     "\\Test-IPA\\ClientApp",
-    "\\Test-IPA\\ClientApp\\public",
-    "\\Test-IPA\\Controllers",
-    "\\Test-IPA\\Pages",
-    "\\Test-IPA\\Properties"
+    "\\Test-IPA\\ClientApp\\src",
+    "\\Test-IPA\\ClientApp\\src\\components"
   ],
-  "SelectedNode": "\\Test-IPA\\Startup.cs",
+  "SelectedNode": "\\Test-IPA\\Test-IPA.sln",
   "PreviewInSolutionExplorer": false
 }
