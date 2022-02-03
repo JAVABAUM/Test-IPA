@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route } from 'react-router';
 import { Layout } from './components/Layout';
 import { Home } from './components/Home';
+import { PennyPusher } from './components/PennyPusher';
 import { PrivateRoute } from '../src/PrivateRoute';
 
 import './custom.css'
@@ -21,6 +22,7 @@ export default class App extends Component {
             <Route exact path='/login' component={Login} />
             <Route exact path='/signup' component={Signup} />
             <Route exact path='/profile' component={Profile} />
+            <Route exact path='/pennypusher' component={PennyPusher} />
       </Layout>
     );
   }

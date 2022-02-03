@@ -24,7 +24,7 @@ export class Home extends Component {
                     <>
                         <div className="row">
 
-                            <div className="col-5" />
+                            <div className="col-3" />
 
                             <div className="col-2" >
                                 <Link to="/slotmachine">
@@ -36,7 +36,12 @@ export class Home extends Component {
                                     <button className="button" >Bingo</button>
                                 </Link>
                             </div>
-                            <div className="col-5" />
+                            <div className="col-2" >
+                                <Link to="/pennypusher">
+                                    <button className="button" >Penny Pusher</button>
+                                </Link>
+                            </div>
+                            <div className="col-3" />
                         </div>
                     </>
                 );

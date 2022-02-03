@@ -24,10 +24,13 @@ body {
     background-color: transparent;
     border: 1px solid white;
     padding: 5px 10px;
+    transition-duration: 200ms;
 }
+
     .button:hover {
         background-color: rgba(255, 255, 255, 0.4);
     }
+
 .button-red {
     margin: 10px;
     padding: 5px 10px;
@@ -53,3 +56,12 @@ body {
     .button-confirm:hover {
         background-color: rgba(54, 232, 71, 0.31);
     }
+
+
+.table{
+    color:white;
+}
+
+.coinrow{
+    text-align:center
+}

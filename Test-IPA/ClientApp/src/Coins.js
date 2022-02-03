@@ -79,7 +79,7 @@ async function updateStats(accountID, statistic, change) {
         }
 
         if (data != {}) {
-            await updateDoc(account, data});
+            updateDoc(accountID, data);
         }
     })
 
@@ -87,4 +87,4 @@ async function updateStats(accountID, statistic, change) {
 
 }
 
-export { addCoinsToAccount, getCoins, getStats };
+export { addCoinsToAccount, getCoins, getStats, updateStats };
