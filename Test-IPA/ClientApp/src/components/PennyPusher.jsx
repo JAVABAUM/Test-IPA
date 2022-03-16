@@ -68,14 +68,37 @@ export class PennyPusher extends Component {
         tempBoard[0] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
         this.setState({ board: tempBoard, coinsToWin: this.state.coinsToWin += coinsToWin });
+
+        this.updateBoard();
+        console.log("bullshit project");
+
+        var win = 0;
+        for (var i = 0; i < 13; i++) {
+            win += parseInt(this.state.board[5][i]);
+        }
+        this.setState({ coinsToWin: this.state.coinsToWin += win });
+
+        var newCoins = 20;
+
+        var newBoard = this.state.board.map((x) => x);
+        this.setState({ coinsToWin: this.state.coinsToWin - newCoins });
+        while (newCoins > 0) {
+            var coinsToAdd = Math.floor(Math.random() * 4);
+            var position = Math.floor(Math.random() * 12);
+            newBoard[0][position] = coinsToAdd;
+            newCoins -= coinsToAdd;
+        }
+        this.setState({ board: newBoard });
     }
 
     componentDidMount() {
         this.setupBoard();
         this.updateBoard();
-        var stats = getStats(getAuth().currentUser.uid).then((value) => {
-            this.setState({ stats: value })
-        })
+        if (getAuth().currentUser) {
+            var stats = getStats(getAuth().currentUser.uid).then((value) => {
+                this.setState({ stats: value })
+            })
+        }
 
     }
 

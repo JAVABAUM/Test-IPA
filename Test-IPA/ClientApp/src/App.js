@@ -6,7 +6,7 @@ import { PennyPusher } from './components/PennyPusher';
 import { PrivateRoute } from '../src/PrivateRoute';
 
 import './custom.css'
-import { Slotmachine } from './components/Slotmachine';
+import Slotmachine from './components/Slotmachine';
 import Signup from './components/Signup';
 import Login from './components/Login';
 import Profile from './components/Profile';
