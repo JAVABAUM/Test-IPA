@@ -1,6 +1,7 @@
 ﻿import React, { Component } from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Link, Redirect, } from 'react-router-dom';
 import './NavMenu.css';
+import '../custom.css'
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { addCoinsToAccount, getCoins, getStats } from '../Coins';
 
@@ -20,25 +21,29 @@ export default class Profile extends Component {
 
 
     componentDidMount() {
-        var coinsFromDB = getCoins(getAuth().currentUser.uid);
-        coinsFromDB.then((number) => {
-            this.setState({ coins: number });
-        });
+        if (getAuth().currentUser) {
+            var coinsFromDB = getCoins(getAuth().currentUser.uid);
+            coinsFromDB.then((number) => {
+                this.setState({ coins: number });
+            });
 
-        var stats = getStats(getAuth().currentUser.uid).then((value) => {
-            console.log(value.coinsWon);
-            this.setState({stats: value});
-        })
-
+            var stats = getStats(getAuth().currentUser.uid).then((value) => {
+                console.log(value);
+            })
+        } else {
+            window.location.replace("/login");
+        }
         onAuthStateChanged(getAuth(), (_user) => {
             this.setState({ user: _user })
         });
+
     }
 
     signout() {
         const auth = getAuth();
         auth.signOut().then(function () {
             console.log("logged out");
+            window.location.replace("/login");
         });
     }
 
@@ -78,7 +83,11 @@ export default class Profile extends Component {
                 <br />
                 <button onClick={this.signout}>logout</button>
                 <br />
-                <button onClick={this.addcoins}>Add 10 coins to your account</button>
+                <div className="row">
+                    <button onClick={this.signout} className="button-red">logout</button>
+                    <button onClick={this.addcoins} className="button-confirm">Add 10 coins to your account</button>
+
+                </div>
             </>
         );
     }
